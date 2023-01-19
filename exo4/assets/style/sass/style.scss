@@ -1,0 +1,193 @@
+@import 'reset.scss';
+@import 'var.scss';
+
+body{
+    
+    font-family: 'Montserrat', sans-serif;
+    
+    .sr-only{
+        display: none;
+    }
+    
+    display: grid;
+    grid-template-rows: 0.1fr 0.9fr;
+    width: 100vw;
+    height: 100vh;
+    
+    header{
+        
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.25fr 0.75fr;
+        
+        section.open{
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            
+            button{
+                font-size: 3rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding-right: 10rem;
+                
+                span{
+                    color: #0077b6;
+                }
+            }
+        }
+        
+        section:not(.open){
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            
+            button{
+                font-size: 3rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding-right: 10rem;
+            }
+        }
+        
+        nav{
+            border-bottom: 1px solid black;
+        }
+    }
+    
+    main{
+        
+        display: grid;
+        grid-template-columns: 0.25fr 0.75fr;
+        
+        aside.open{
+            
+            border-right: 1px solid black;
+            padding: 5rem 1rem;
+            text-transform: uppercase;
+            nav{
+                
+                h2{
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin: 1rem 0;
+                    cursor: pointer;
+                }
+                
+                ul{
+                    
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    
+                    li{
+                        
+                        margin: 0.5rem 0;
+                        
+                        a{
+                            text-decoration: none;
+                        }
+                        
+                        a:visited{
+                            color: black;
+                        }
+                        
+                        a:hover{
+                            color: black;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+                ul.close{
+                    
+                    display: none;
+                }
+            }
+        }
+        
+        aside:not(.open){
+            display: none;
+        }
+        
+        section:first-of-type{
+            
+            padding: 2rem;
+            
+            h2{
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #0077b6;
+                margin-bottom: 4rem;
+            }
+            
+            .add-btn{
+                background-color: #023e8a;
+                color: white;
+                padding: 0.7rem 1.2rem;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 2px;
+                box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+        
+        section:last-of-type{
+            
+            table{
+                margin-top: 4rem;
+                width: 100%;
+                
+                thead{
+                    
+                    tr{
+                        font-weight: 500;
+                        font-size: 1.3rem;
+                        line-height: 4rem;
+                        text-align: left;
+                    }
+                }
+                
+                tbody{
+                    
+                    tr{
+                        font-size: 1.2rem;
+                        line-height: 2.5rem;
+                        
+                        td:last-of-type{
+                            
+                            a{
+                                color: #023E8A;
+                            }
+                            
+                            button{
+                                background: none;
+                                color: #b50604;
+                                border: none;
+                                font-size: 1.5rem;
+                            }
+                        }
+                        
+                        td{
+                            
+                            a{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    
+                    tr:not(:last-of-type){
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}

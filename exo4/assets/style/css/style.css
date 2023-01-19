@@ -1,0 +1,192 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-rows: 0.1fr 0.9fr;
+  width: 100vw;
+  height: 100vh;
+}
+body .sr-only {
+  display: none;
+}
+body header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+}
+body header section.open {
+  border-right: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+body header section.open button {
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 10rem;
+}
+body header section.open button span {
+  color: #0077b6;
+}
+body header section:not(.open) {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+body header section:not(.open) button {
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 10rem;
+}
+body header nav {
+  border-bottom: 1px solid black;
+}
+body main {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+}
+body main aside.open {
+  border-right: 1px solid black;
+  padding: 5rem 1rem;
+  text-transform: uppercase;
+}
+body main aside.open nav h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+body main aside.open nav ul {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+body main aside.open nav ul li {
+  margin: 0.5rem 0;
+}
+body main aside.open nav ul li a {
+  text-decoration: none;
+}
+body main aside.open nav ul li a:visited {
+  color: black;
+}
+body main aside.open nav ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+body main aside.open nav ul.close {
+  display: none;
+}
+body main aside:not(.open) {
+  display: none;
+}
+body main section:first-of-type {
+  padding: 2rem;
+}
+body main section:first-of-type h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #0077b6;
+  margin-bottom: 4rem;
+}
+body main section:first-of-type .add-btn {
+  background-color: #023e8a;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+body main section:last-of-type table {
+  margin-top: 4rem;
+  width: 100%;
+}
+body main section:last-of-type table thead tr {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 4rem;
+  text-align: left;
+}
+body main section:last-of-type table tbody tr {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+body main section:last-of-type table tbody tr td:last-of-type a {
+  color: #023E8A;
+}
+body main section:last-of-type table tbody tr td:last-of-type button {
+  background: none;
+  color: #b50604;
+  border: none;
+  font-size: 1.5rem;
+}
+body main section:last-of-type table tbody tr td a {
+  text-decoration: none;
+}
+body main section:last-of-type table tbody tr:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */
