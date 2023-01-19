@@ -6,8 +6,11 @@ let Nav = {
     },
     methods : {
         open (){
-            let ul = document.querySelector("body main asside nav h2 ul");
-            ul.classList.toggle("close");
+            if(this.ul === false){
+                this.ul = true;
+            }else{
+                this.ul = false;
+            }
         }
     },
     props : [
@@ -16,15 +19,18 @@ let Nav = {
         ],
     template: `  
 		<nav>
-		    <h2 v-for="Aside in Asides" @click="open">
+		    <h2 @click="this.open()">
 		        {{ title }}
+		        <span class="bi bi-arrow-down-left-square-fill"></span>
 		    </h2>
-    		<ul v-if="ul === true" class="open">
-        		<li v-for="Aside in Asides">
-        		    {{ Aside.links }}
+    		<ul v-if="this.ul === true" class="open">
+    		<template v-for="Aside in Asides">
+        		<li>
+        		    {{ links }}
         		</li>
-    		</ul v-else="ul === false" class="close">
-    		<ul>
+        	</template>
+    		</ul>
+    		<ul v-else class="">
     		</ul>
 		</nav>
 	`

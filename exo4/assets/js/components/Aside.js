@@ -35,7 +35,7 @@ let Aside = {
     },
     template: `  
 		<aside>
-		<Nav :Asides="this.Asides"/>
+		<Nav :title="Asides.title" :links="Aside.links"/>
 		</aside>
 	`
 };  
